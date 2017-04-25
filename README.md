@@ -1,49 +1,49 @@
 # nodejs
 node js training
 
-#Core Modules
+# Core Modules
 Frequently used node modules 
 
-#async
+# async
 used for javascript asynchronous programming 
 
-#aws-sdk
+# aws-sdk
 used to work with AWS 
 
-#bcryptjs
+# bcryptjs
 used to encrypt string e.g. store password
 
-#bluebird
+# bluebird
 used to work with promises
 
-#boom 
+# boom 
 provides a set of utilities for returning HTTP errors
 
-#Dotenv 
+# Dotenv 
 loads environment variables from a .env file into process.env. (Environment variables)
 
-#globby
+# globby
 for multiple patterns and exposes a Promise API
 
-#jsonwebtoken
+# jsonwebtoken
 used to encrypt input payload of request 
 
-#lodash
+# lodash
 JavaScript utility library 
 
-#moment
+# moment
 used to Parse, validate, manipulate, and display dates and times in JavaScript
 
-#node-schedule
+# node-schedule
 cron and non cron job scheduler
 
-#nodemailer
+# nodemailer
 used to send email using SMTP
 
-#redis
+# redis
 Redis is a fast and efficient in-memory key-value store (Server side cache)
 
-#joi
+# joi
 javascript validator
 
 # Useful Links
