@@ -1,5 +1,8 @@
+var path = require('path');
+var util = require('util');
 module.exports.sayHelloInEnglish = () => {
-    return "Hello";
+    util.log("sayHelloInEnglish executes")
+    return `Hello ${__filename}`;
 };
 
 module.exports.sayHelloInSpanish = () => {
