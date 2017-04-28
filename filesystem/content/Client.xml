@@ -1,0 +1,1516 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kantar.GHP.Client.API</name>
+    </assembly>
+    <members>
+        <member name="M:Kantar.GHP.Client.API.App_Start.NinjectWebCommon.Start">
+            <summary>
+            Starts the application
+            </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.App_Start.NinjectWebCommon.Stop">
+            <summary>
+            Stops the application.
+            </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.App_Start.NinjectWebCommon.CreateKernel">
+            <summary>
+            Creates the kernel that will manage your application.
+            </summary>
+            <returns>The created kernel.</returns>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.App_Start.NinjectWebCommon.RegisterServices(Ninject.IKernel)">
+            <summary>
+            Load your modules or register your services here!
+            </summary>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.Controllers.ClientController.List">
+             <summary APIName="Get Client List Data"> 
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Headers</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Parameters</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>NA</term>
+             <term>NA</term>
+             <term>NA</term>
+             <term>NA</term>
+             </item>
+             </list>
+             <list type="table"> ///OUTPUT
+             <listheader>
+             <term>Status</term>
+             <term>Output</term>    
+             </listheader>
+             <item>
+             <term>200</term>
+             <term>
+                {
+            	"Timestamp": 1465968631,
+            	"Status": {
+            		"Messages": [
+            			"Successful"
+            		]
+            },
+            	"Data": {
+            		"Active": [{
+            			"ClientId": 314,
+            			"ClientName": "INFOSYS LTD.##TESTING ONLY##",
+            			"Status": "Active",
+            			"DataPolicyId": 3,
+            			"CompanyLogo": "",
+            			"DeviationFactorId": 0,
+            			"Value": 0,
+            			"CostTypeId": 0,
+            			"CountryId": 1,
+            			"Addresses": [{
+            				"AddressId": 114,
+            				"Street1": "plot 1",
+            				"Street2": "hinjewadi phase 1",
+            				"Country": "INDIA",
+            				"State": "MAHARASHTRA",
+            				"City": "PUNE",
+            				"Zip": "411038",
+            				"PhoneNumber": "020 38887788",
+            				"IsHeadQuarter": false
+            
+                        }, {
+            				"AddressId": 115,
+            				"Street1": "plot 31",
+            				"Street2": "Bannerghatta",
+            				"Country": "INDIA",
+            				"State": "Karnataka",
+            				"City": "Bengaluru",
+            				"Zip": "111222",
+            				"PhoneNumber": "040 38887788",
+            				"IsHeadQuarter": true
+            			}],
+            			"Contacts": [{
+            				"ContactId": 97,
+            				"FirstName": "Joahn",
+                         "LastName": "Dear",
+            				"EmailAddress": "fname.lname@cname.com",
+            				"ContactNumber": "5456318421",
+            				"Designation": "sales manager",
+            				"IsPrimaryContact": true
+            			}, {
+            				"ContactId": 98,
+            				"FirstName": "Mice",
+                         "LastName": "Hussy",
+            				"EmailAddress": "fname2.lname2@cname.com",
+            				"ContactNumber": "5456318421",
+            				"Designation": "sales manager",
+            				"IsPrimaryContact": false
+            			}]
+            		}],
+            		"Archive": [{
+            			"ClientId": 1,
+            			"ClientName": "Apple",
+            			"Status": "Archive",
+            			"DataPolicyId": 1,
+            			"CompanyLogo": "",
+            			"DeviationFactorId": 1,
+            			"Value": 10,
+            			"CostTypeId": 1,
+            			"CountryId": 1,
+            			"Addresses": [{
+            				"AddressId": 82,
+            				"Street1": "ABC Road",
+            				"Street2": "PQR Road",
+            				"Country": "India",
+            				"State": "Maharashtra",
+            				"City": "pune",
+            				"Zip": "411001",
+            				"PhoneNumber": "1215d5dd",
+            				"IsHeadQuarter": true
+            			}, {
+            				"AddressId": 83,
+            				"Street1": "ABC Road",
+            				"Street2": "PQR Road",
+            				"Country": "India",
+            				"State": "Maharashtra",
+            				"City": "pune",
+            				"Zip": "411001",
+            				"PhoneNumber": "1215d5dd",
+            				"IsHeadQuarter": true
+            			}],
+            			"Contacts": [{
+            				"ContactId": 5,
+            				"FirstName": "Ram",
+                         "LastName": "Pol",
+            				"EmailAddress": "Shital@abc.com",
+            				"ContactNumber": "",
+            				"Designation": "",
+            				"IsPrimaryContact": true
+            			}]
+            		}, {
+            			"ClientId": 36,
+            			"ClientName": "Bajaj Auto",
+            			"Status": "Archive",
+            			"DataPolicyId": 0,
+            			"CompanyLogo": "",
+            			"DeviationFactorId": 1,
+            			"Value": 10,
+            			"CostTypeId": 1,
+            			"CountryId": 1,
+            			"Addresses": [{
+            				"AddressId": 86,
+            				"Street1": "ssss",
+            				"Street2": "ddddd",
+            				"Country": "dfdfd",
+            				"State": "dfsdfs",
+            				"City": "dfgfgf",
+            				"Zip": "41ssss",
+            				"PhoneNumber": "dfdsf",
+            				"IsHeadQuarter": true
+            			}],
+            			"Contacts": [{
+            				"ContactId": 15,
+            				"FirstName": "Ram",
+                         "LastName": "Pal",
+            				"EmailAddress": "Priyank@abc.com",
+            				"ContactNumber": "",
+            				"Designation": "",
+            				"IsPrimaryContact": true
+            			}]
+            		}, {
+            			"ClientId": 315,
+            			"ClientName": "INFOSYS technologiesLTD.##TESTING ONLY##",
+            			"Status": "Archive",
+            			"DataPolicyId": 3,
+            			"CompanyLogo": "",
+            			"DeviationFactorId": 0,
+            			"Value": 0,
+            			"CostTypeId": 0,
+            			"CountryId": 1,
+            			"Addresses": [{
+            				"AddressId": 116,
+            				"Street1": "suite 100",
+            				"Street2": "some streed",
+            				"Country": "USA",
+            				"State": "TEXAS",
+            				"City": "PLANO",
+            				"Zip": "12587",
+            				"PhoneNumber": "020 38887788",
+            				"IsHeadQuarter": false
+            			}, {
+            				"AddressId": 117,
+            				"Street1": "plot 31",
+            				"Street2": "Bannerghatta",
+            				"Country": "INDIA",
+            				"State": "Karnataka",
+            				"City": "Bengaluru",
+            				"Zip": "111222",
+            				"PhoneNumber": "040 38887788",
+            				"IsHeadQuarter": true
+            			}],
+            			"Contacts": [{
+            				"ContactId": 99,
+            				"FirstName": "Ricky",
+                         "LastName": "John",
+            				"EmailAddress": "ARCfname.lname@cname.com",
+            				"ContactNumber": "5456318421",
+            				"Designation": "sales manager",
+            				"IsPrimaryContact": true
+            			}, {
+            				"ContactId": 100,
+            				"FirstName": "Trevor",
+                         "LastName": "Brohan",
+            				"EmailAddress": "ARCfname2.lname2@cname.com",
+            				"ContactNumber": "5456318421",
+            				"Designation": "sales manager",
+            				"IsPrimaryContact": false
+            			}]
+            		}],
+            		"DeviationFactor": [{
+            			"DeviationFactorId": 1,
+            			"Name": "Plus"
+            		}, {
+            			"DeviationFactorId": 2,
+            			"Name": "Minus"
+            		}],
+            		"CostType": [{
+            			"CostTypeId": 1,
+            			"Name": "Adv"
+            		}, {
+            			"CostTypeId": 2,
+            			"Name": "Direct Cost"
+            		}, {
+            			"CostTypeId": 3,
+            			"Name": "Calculated Data Cost"
+            		}]
+            	}
+            }
+            </term>
+             </item>
+             <term>404</term>
+             <term>
+             {
+                 {
+                     "Timestamp": 1465457211,
+                     "Messages": [
+                     "No HTTP resource was found that matches the request URI 'http://dev.kantar-clients.com/api/client/list1'."
+                     ],
+                 "ErrorCode": "NOT_FOUND"
+                 }
+             }
+             </term>
+             <term>500</term>
+             <term>
+             {
+              "Timestamp": 1465457473,
+              "Messages": [
+                "We apologize but an error occurred within the application. Please try again later."
+              ],
+              "ErrorCode": "500"
+            }
+             </term>
+             <term>
+             </term>
+             </list>        
+             <list type="bullet">
+             <item>
+             <description>Type : GET </description>
+             </item>
+             <item>
+             <description> Dev URL : http://dev.kantar-clients.com/api/client/list </description>
+             </item>
+             <item>
+             <description> QA URL :  http://qa.kantar-clients.com/api/client/list </description>
+             </item>
+             <item>
+             <description>Jira task : https://cuelogickantar.atlassian.net/browse/GHP-764 </description>
+             </item>
+             <item>
+             <description>Database Tables : Platform.Company,Platform.CompanyStatus,Platform.CompanyAddress,Platform.[User],Platform.ClientsDataPolicy   </description>
+             </item>
+             <item>
+             <description>Procedures :Platform.Client_GetClientList  </description>
+             </item>
+             </list>
+             </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.Controllers.ClientController.Archive(Kantar.GHP.Client.Entity.Models.ClientIdModel)">
+             <summary APIName="Archive Client"> 
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Headers</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Parameters</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>ClientId</term>
+             <term>Integer</term>
+             <term>Mandatory</term>
+             <term>Archive client for specified id</term>
+             </item>
+             </list>
+             <list type="table"> ///Input
+             <listheader>
+             <term>Input Payload</term>
+             </listheader>
+             <item>
+             <term>
+             {
+               "ClientId":1
+             }
+             </term>
+             </item>
+             </list>
+             <list type="table"> ///OUTPUT
+             <listheader>
+             <term>Status</term>
+             <term>Output</term>    
+             </listheader>
+             <item>
+             <term>200</term>
+             <term>  
+             {
+             "Timestamp": 1465457892,
+             "Status": {
+               "Messages": [
+                 "Client Archived Successfully"
+               ]
+               },
+             "Data": null
+            }
+            </term>
+             </item>
+             <item>
+             <term>404</term>
+             <term>
+            {
+              "Timestamp": 1466572717,
+              "Messages": [
+                "Error converting value {null} to type 'System.Int32'. Path 'ClientId', line 2, position 18."
+              ],
+              "ErrorCode": "API_BAD_REQUEST"
+            }
+             </term>    
+             </item>
+             <item>
+             <term>500</term>
+             <term>
+             {
+              "Timestamp": 1465457948,
+              "Messages": [
+                "We apologize but an error occurred within the application. Please try again later."
+              ],
+              "ErrorCode": "500"
+            }
+             </term>
+             </item>
+             </list>        
+             <list type="bullet">
+             <item>
+             <description>Type : POST </description>
+             </item>
+             <item>
+             <description> Dev URL :  http://dev.kantar-clients.com/api/client/Archive </description>
+             </item>
+             <item>
+             <description> QA URL :  http://qa.kantar-clients.com/api/client/Archive </description>
+             </item>
+             <item>
+             <description>Jira task : https://cuelogickantar.atlassian.net/browse/GHP-332 </description>
+             </item>
+             <item>
+             <description>Database Tables : Platform.Company, Platform.CompanyStatus </description>
+             </item>
+             <item>
+             <description>Procedures :Platform.Client_Archive  </description>
+             </item>
+             </list>
+             </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.Controllers.ClientController.Activate(Kantar.GHP.Client.Entity.Models.ClientIdModel)">
+             <summary APIName="Activate Client"> 
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Headers</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Parameters</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>ClientId</term>
+             <term>Integer</term>
+             <term>Mandatory</term>
+             <term>Activate client for specified id</term>
+             </item>
+             </list>
+             <list type="table"> ///Input
+             <listheader>
+             <term>Input Payload</term>
+             </listheader>
+             <item>
+             <term>
+             {
+               "ClientId":1
+             }
+             </term>
+             </item>
+             </list>
+             <list type="table"> ///OUTPUT
+             <listheader>
+             <term>Status</term>
+             <term>Output</term>    
+             </listheader>
+             <item>
+             <term>200</term>
+             <term>  
+                    {
+              "Timestamp": 1466573235,
+              "Status": {
+                "Messages": [
+                  "Client Activated Successfully"
+                ]
+                },
+              "Data": null
+            }
+            </term>
+             </item>
+             <item>
+             <term>400 Bad Request Scenarios</term>
+             <term>Scenario 1</term>
+             <term>
+                    {
+              "Timestamp": 1466573203,
+              "Messages": [
+                "Client does not exist!"
+              ],
+              "ErrorCode": "SQL_BUSINESS_EXCEPTION"
+            }
+             </term>
+             </item>
+             <item>
+             <term>404</term>
+             <term>
+                   {
+                     "Timestamp": 1465457945,
+                     "Messages": [
+                          "No HTTP resource was found that matches the request URI 'http://dev.kantar-clients.com/api/client/Activate1'."
+                         ],
+                     "ErrorCode": "NOT_FOUND"
+              }
+             </term>
+             <term>500</term>
+             <term>
+             {
+              "Timestamp": 1465457948,
+              "Messages": [
+                "We apologize but an error occurred within the application. Please try again later."
+              ],
+              "ErrorCode": "500"
+            }
+             </term>
+             </item>
+             </list>
+             <list type="bullet">
+             <item>
+             <description>Type : POST </description>
+             </item>
+             <item>
+             <description> Dev URL :  http://dev.kantar-clients.com/api/client/Activate </description>
+             </item>
+             <item>
+             <description> QA URL :  http://qa.kantar-clients.com/api/client/Activate </description>
+             </item>
+             <item>
+             <description>Jira task : https://cuelogickantar.atlassian.net/browse/GHP-545 </description>
+             </item>
+             <item>
+             <description>Database Tables : Platform.Company,Platform.CompanyStatus </description>
+             </item>
+             <item>
+             <description>Procedures :Platform.Client_Activate  </description>
+             </item>
+             </list>        
+             </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.Controllers.ClientController.ClientNameList">
+             <summary APIName="Get Client Name List"> 
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Headers</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Parameters</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>NA</term>
+             <term>NA</term>
+             <term>NA</term>
+             <term>NA</term>
+             </item>
+             </list>
+             <list type="table"> ///OUTPUT
+             <listheader>
+             <term>Status</term>
+             <term>Output</term>    
+             </listheader>
+             <item>
+             <term>200</term>
+             <term>
+            {
+            	Timestamp: 1465895746,
+            	Status: {
+            		Messages: [
+            			"Successful"
+            		]
+            	},
+            	Data: {
+            		ClientList: [{
+            			ClientId: 36,
+            			ClientName: "Bajaj Auto"
+            		}]
+            	}
+            }                                               
+            </term>
+             </item>
+             <term>404</term>
+             <term>
+             {
+                 {
+                     "Timestamp": 1465457211,
+                     "Messages": [
+                     "No HTTP resource was found that matches the request URI 'http://dev.kantar-clients.com/api/client/clientlist1'."
+                     ],
+                 "ErrorCode": "NOT_FOUND"
+                 }
+             }
+             </term>
+             <term>500</term>
+             <term>
+             {
+              "Timestamp": 1465457473,
+              "Messages": [
+                "We apologize but an error occurred within the application. Please try again later."
+              ],
+              "ErrorCode": "500"
+            }
+             </term>
+             <term>
+             </term>
+             </list>        
+             <list type="bullet">
+             <item>
+             <description>Type : GET </description>
+             </item>
+             <item>
+             <description> Dev URL : http://dev.kantar-clients.com/api/client/ClientNameList </description>
+             </item>
+             <item>
+             <description> QA URL :  http://qa.kantar-clients.com/api/client/ClientNameList </description>
+             </item>
+             <item>
+             <description>Jira task : https://cuelogickantar.atlassian.net/browse/GHP-347 </description>
+             </item>
+             <item>
+             <description>Database Tables : dbo.Company </description>
+             </item>
+             <item>
+             <description>Procedures : Platform.Client_GetClientNameList  </description>
+             </item>
+             </list>
+             </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.Controllers.ClientController.SaveClientInfo(Kantar.GHP.Client.Entity.Models.ClientModel)">
+             <summary APIName="Create/Update Client Info"> 
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Headers</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Parameters</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>ClientId</term>
+             <term>Integer</term>
+             <term>Mandatory</term>
+             <term>Client id to create/update</term>
+             </item>
+             <item>
+             <term>clientName</term>
+             <term>string</term>
+             <term>Mandatory</term>
+             <term>Name of client. Max length is 250 characters</term>
+             </item>
+             <item>
+             <term>dataPolicyId</term>
+             <term>Integer</term>
+             <term>Mandatory</term>
+             <term>Data policy id</term>
+             </item>
+             <item>
+             <term>CompanyLogo</term>
+             <term>String</term>
+             <term>Optional</term>
+             <term>Company logo path</term>
+             </item>
+             <item>
+             <term>countryId</term>
+             <term>Integer</term>
+             <term>Mandatory</term>
+             <term>Country id of company</term>
+             </item>
+             <item>
+             <term>country</term>
+             <term>String</term>
+             <term>Mandatory</term>
+             <term>Country name. Max length is 100 characters</term>
+             </item>
+             <item>
+             <term>state</term>
+             <term>String</term>
+             <term>Mandatory</term>
+             <term>State name. Max length is 100 characters</term>
+             </item>
+             <item>
+             <term>city</term>
+             <term>String</term>
+             <term>Mandatory</term>
+             <term>City name. Max length is 100 characters</term>
+             </item>
+             <item>
+             <term>street1</term>
+             <term>String</term>
+             <term>Mandatory</term>
+             <term>Street1 address. Max length is 400 characters</term>
+             </item>
+             <item>
+             <term>street2</term>
+             <term>String</term>
+             <term>Optional</term>
+             <term>Street2 address. Max length is 400 characters</term>
+             </item>
+             <item>
+             <term>phoneNumber</term>
+             <term>String</term>
+             <term>Mandatory</term>
+             <term>Phone number. Max length is 250 characters</term>        
+             </item>
+             </list>
+             <list type="table"> ///Input
+             <listheader>
+             <term>Input Payload</term>
+             </listheader>
+             <item>
+             <term>
+             {
+            	"clientId": 0,
+            	"clientName": "Tata Telco Pune",
+            	"dataPolicyId": 1,
+            	"countryId": 1,
+            	"companyLogo": "",
+              addresses": [{
+             "addressId":0 ,
+             "street1": "ABC Road mod111",
+             "street2": "PQR Road mod111",
+             "country": "India",
+             "state": "Maharashtra",
+             "city": "pune",
+             "zip": "411001",
+             "phoneNumber": "1215d5dd"
+             }]
+             }
+             </term>
+             </item>
+             </list>
+             <list type="table"> ///OUTPUT
+             <listheader>
+             <term>Status</term>
+             <term>Output</term>    
+             </listheader>
+             <item>
+             <term>200</term>
+             <term>
+            {
+             "Timestamp": 1466149151,
+             "Status": {
+               "Messages": [
+                 "Client created successfully"
+               ]
+               },
+             "Data": {
+               "ClientId": 338,
+               "ClientName": "Tata Telco Pune",
+               "CountryId": 1,
+               "DataPolicyId": 1,
+               "CompanyLogo": "",
+               "Addresses": [
+                 {
+                   "AddressId": 206,
+                   "Street1": "ABC Road mod111",
+                   "Street2": "PQR Road mod111",
+                   "Zip": "411001",
+                   "City": "pune",
+                   "State": "Maharashtra",
+                   "Country": "India",
+                   "PhoneNumber": "1215d5dd"
+                 }
+               ]
+             }
+            }
+             </term></item>
+             <item>
+             <term>400</term>
+             <term> scenario 1:</term>
+             <term>
+            {
+              "Timestamp": 1467379797,
+              "Messages": [
+                "Client name is required.",
+                "Invalid CountryId",
+                "Invalid DataPolicyId"
+              ],
+              "ErrorCode": "API_BAD_REQUEST"
+            }
+             </term>
+             <term> scenario 2:</term>
+             <term>
+             {
+              "Timestamp": 1466079165,
+              "Messages": [
+                "Client with same name already exists"
+              ],
+              "ErrorCode": "API_FAILURE"
+            }
+             </term>
+             </item>
+             <item>
+             <term>500</term>
+             <term>
+             {
+              "Timestamp": 1465457948,
+              "Messages": [
+                "We apologize but an error occurred within the application. Please try again later."
+              ],
+              "ErrorCode": "500"
+            }
+             </term>
+             </item>
+             </list>        
+             <list type="bullet">
+             <item>
+             <description>Type : POST </description>
+             </item>
+             <item>
+             <description> Dev URL :  http://dev.kantar-clients.com/api/client/saveClientInfo </description>
+             </item>
+             <item>
+             <description> QA URL :  http://qa.kantar-clients.com/api/client/saveClientInfo </description>
+             </item>
+             <item>
+             <description>Jira task : https://cuelogickantar.atlassian.net/browse/GHP-319 </description>
+             </item>
+             <item>
+             <description>Database Tables : Platform.Company,Platform.CompanyStatus,Platform.CompanyAddress,Platform.ClientsDataPolicy </description>
+             </item>
+             <item>
+             <description>Procedures :Platform.Client_CreateClient  </description>
+             </item>
+             </list>
+             </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.Controllers.ClientController.SaveClientChargeProfile(Kantar.GHP.Client.Entity.Models.ChargeProfile.ChargeProfileModel)">
+             <summary APIName="Create/Update Client charge profile"> 
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Headers</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Parameters</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             </list>
+             <list>
+             <item>
+             <term>ClientId</term>
+             <term>Integer</term>
+             <term>Mandatory</term>
+             <term>Client id to create/update charge profile</term>
+             </item>
+             <item>
+             <term>deviationFactorId</term>
+             <term>Integer</term>
+             <term>Mandatory</term>
+             <term>Id of deviation factor</term>
+             </item>
+             <item>
+             <term>value</term>
+             <term>Decimal(17,2)</term>
+             <term>Mandatory</term>
+             <term>Value of charge profile. Max value is 999999999999999.99</term>
+             </item>
+             <item>
+             <term>costTypeId</term>
+             <term>Integer</term>
+             <term>Mandatory</term>
+             <term>Cost type</term>
+             </item>
+             </list>
+             <list type="table"> ///INPUT
+             <listheader>
+             <term>Input Payload</term>
+             </listheader>
+             <item>
+             <term>
+            {
+                "clientid":347,
+                "deviationFactorId": 1,
+                "value": 20,
+                "costTypeId": 1
+            }
+             </term>
+             </item>
+             </list>
+             <list type="table"> ///OUTPUT
+             <listheader>
+             <term>Status</term>
+             <term>Output</term>    
+             </listheader>
+             <item>
+             <term>200</term>
+             <term>
+            {
+              "Timestamp": 1466241028,
+              "Status": {
+                "Messages": [
+                  "Charge profile saved successfully"
+                ]
+                },
+              "Data": null
+            }
+             </term>
+             </item>
+             <item>
+             <term>Following are scenarios where 400 code occurred</term>
+             <term>400</term>
+             <term>Scenario : 1</term>
+             <term>
+            {
+              "Timestamp": 1466241780,
+              "Messages": [
+                "Invalid Cost Type, Allow positive integers only"
+              ],
+              "ErrorCode": "API_BAD_REQUEST"
+            }
+            </term>
+            <term>Scenario 2: </term>
+            <term>
+                    {
+              "Timestamp": 1467645000,
+              "Messages": [
+                "Deviation factor does not exist!"
+              ],
+              "ErrorCode": "SQL_BUSINESS_EXCEPTION"
+            }
+            </term>
+             </item>
+             <item>
+             <term>500</term>
+             <term>
+                {
+                 "Timestamp": 1466241869,
+                 "Messages": [
+                 "Charge profile saving failed"
+                 ],
+                 "ErrorCode": "API_FAILURE"
+                }
+             </term>
+             <term>Scenario 3 :</term>
+             <term>
+                    {
+              "Timestamp": 1467645221,
+              "Messages": [
+                "Cost Type is Invalid, only positive integers are allowed"
+              ],
+              "ErrorCode": "API_BAD_REQUEST"
+            }
+             </term>
+             </item>
+             </list>        
+             <list type="bullet">
+             <item>
+             <description>Type : POST </description>
+             </item>
+             <item>
+             <description> Dev URL :  http://dev.kantar-clients.com/api/client/SaveClientChargeProfile </description>
+             </item>
+             <item>
+             <description> QA URL :  http://qa.kantar-clients.com/api/client/SaveClientChargeProfile </description>
+             </item>
+             <item>
+             <description>Jira task : https://cuelogickantar.atlassian.net/browse/GHP-588 </description>
+             </item>
+             <item>
+             <description>Database Tables : Platform.Company,Platform.CompanyStatus, Platform.CostType, Platform.DeviationFactor </description>
+             </item>
+             <item>
+             <description>Procedures :Platform.Client_SaveClientChargeProfile  </description>
+             </item>
+             </list>
+             </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.Controllers.ClientController.CreateContact(Kantar.GHP.Client.Entity.Models.Contact.ContactModel)">
+             <summary APIName="Create Client Contact"> 
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Headers</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Parameters</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>ClientId</term>
+             <term>Integer</term>
+             <term>M</term>
+             <term>Client Id</term>
+             </item>
+             <item>
+             <term>FirstName</term>
+             <term>String</term>
+             <term>M</term>
+             <term>First name of contact person. Max length is 100 characters</term>
+             </item>
+             <item>
+             <term>LastName</term>
+             <term>String</term>
+             <term>M</term>
+             <term>Last name of contact person. Max length is 100 characters</term>
+             </item>
+             <item>
+             <term>EmailAddress</term>
+             <term>String</term>
+             <term>M</term>
+             <term>Email address of contact person. Max length is 320 characters</term>
+             </item>
+             <item>
+             <term>ContactNumber</term>
+             <term>String</term>
+             <term>O</term>
+             <term>Contact number of contact person. Max length is 250 characters</term>
+             </item>
+             <item>
+             <term>Designation</term>
+             <term>String</term>
+             <term>O</term>
+             <term>Designation of contact person. Max length is 100 characters</term>
+             </item>
+             <item>
+             <term>IsPrimaryContact</term>
+             <term>Boolean</term>
+             <term>M</term>
+             <term>Is this primary contact</term>
+             </item>
+             </list>
+             <list type="table"> ///INPUT
+             <listheader>
+             <term>Input Payload</term>
+             </listheader>
+             <item>
+             <term>
+             {
+                    "clientid":36,
+                    "contactId":0,
+                    "firstName":"abc",
+                    "lastName":"abc",
+                    "emailAddress":"abc7@abc.com",
+                    "contactNumber":"123456789",
+                    "designation":"abc",
+                    "isPrimaryContact": false
+             }    
+             </term>
+             </item>
+             </list>
+             <list type="table"> ///OUTPUT
+             <listheader>
+             <term>Status</term>
+             <term>Output</term>  
+             </listheader>
+             <item>
+             <term>200</term>
+             <term>
+              {
+              "Timestamp": 1466411459,
+              "Status": {
+                "Messages": [
+                  "Contact created successfully"
+                ]
+                },
+              "Data": {
+                "ContactId": 130
+              }
+             }
+             </term>
+             </item>
+             <item>
+             <term>400</term>
+             <term>
+             Scenario 1: 
+             {
+              "Timestamp": 1466411981,
+              "Messages": [
+                "This email address is already present. Please choose a different email address"
+              ],
+              "ErrorCode": "SQL_BUSINESS_EXCEPTION"
+             }      
+             </term>
+             <term>Scenario 2</term>
+             <term>
+                    {
+              "Timestamp": 1467645424,
+              "Messages": [
+                "Client Id is Invalid, only positive integers are allowed"
+              ],
+              "ErrorCode": "API_BAD_REQUEST"
+            }
+             </term>
+             </item>
+             <item>
+             <term>500</term>
+             <term>
+                     {
+                      "Timestamp": 1466412216,
+                      "Messages": [
+                        "Contact could not be created"
+                      ],
+                      "ErrorCode": "API_FAILURE"
+                    }
+             </term>
+             </item>
+             </list>        
+             <list type="bullet">
+             <item>
+             <description>Type : POST </description>
+             </item>
+             <item>
+             <description> Dev URL :  http://dev.kantar-clients.com/api/client/CreateContact </description>
+             </item>
+             <item>
+             <description> QA URL :  http://qa.kantar-clients.com/api/client/CreateContact </description>
+             </item>
+             <item>
+             <description>Jira task : https://cuelogickantar.atlassian.net/browse/GHP-594 </description>
+             </item>
+             <item>
+             <description>Database Tables : Platform.User, Platform.Company </description>
+             </item>
+             <item>
+             <description>Procedures : Platform.Client_CreateClientContact  </description>
+             </item>
+             </list>
+             </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.Controllers.ClientController.DeleteContact(Kantar.GHP.Client.Entity.Models.Contact.ContactIdModel)">
+             <summary APIName="Delete Client Contact"> 
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Headers</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Input Parameters</term>
+             </listheader>
+             </list>
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>ContactId</term>
+             <term>Integer</term>
+             <term>M</term>
+             <term>Contact Id</term>
+             </item>
+             <item>
+             <term>ClientId</term>
+             <term>Integer</term>
+             <term>M</term>
+             <term>Data Provider Id</term>
+             </item>         
+             </list>
+             <list type="table"> ///INPUT
+             <listheader>
+             <term>Input Payload</term>
+             </listheader>
+             <item>
+             <term>
+             {
+                "ClientId":313,
+                "ContactId":125    
+             }
+             </term>
+             </item>
+             </list>
+             <list type="table"> ///OUTPUT
+             <listheader>
+             <term>Status</term>
+             <term>Output</term>    
+             </listheader>
+             <item>
+             <term>200</term>
+             <term>
+             {
+              "Timestamp": 1466426736,
+              "Status": {
+                "Messages": [
+                  "Contact deleted successfully"
+                ]
+                },
+              "Data": null
+            }
+            </term>
+             </item>
+             <item>
+             <term>400</term>
+            <term>Scenario 1</term>
+             <term>
+            {
+              "Timestamp": 1465476522,
+              "Messages": [
+                "Contact does not exists"
+              ],
+              "ErrorCode": "API_BAD_REQUEST"
+            }
+            </term> 
+            <term>Scenario 2</term>
+            <term>
+                    {
+              "Timestamp": 1467645317,
+              "Messages": [
+                "Primary Contact can not be deleted!"
+              ],
+              "ErrorCode": "SQL_BUSINESS_EXCEPTION"
+            }
+            </term>
+             </item>
+             <item>
+             <term>500</term>
+             <term>
+                   {
+              "Timestamp": 1466426834,
+              "Messages": [
+                "Contact could not be deleted"
+              ],
+              "ErrorCode": "API_FAILURE"
+            }
+             </term>
+             </item>
+             </list>        
+             <list type="bullet">
+             <item>
+             <description>Type : Post </description>
+             </item>
+             <item>
+             <description> Dev URL :  http://dev.kantar-clients.com/api/client/Deletecontact </description>
+             </item>
+             <item>
+             <description> QA URL :  http://qa.kantar-clients.com/api/client/Deletecontact </description>
+             </item>
+             <item>
+             <description>Jira task : https://cuelogickantar.atlassian.net/browse/GHP-595 </description>
+             </item>
+             <item>
+             <description>Database Tables : Platform.User </description>
+             </item>
+             <item>
+             <description>Procedures : Platform.Client_DeleteClientContact  </description>
+             </item>
+             </list>
+             </summary>
+        </member>
+        <member name="M:Kantar.GHP.Client.API.Controllers.CompanyController.GetAllCompanyList(System.String)">
+             <summary APIName="GetAllCompanyList">        
+             <list type="table"> ///HEADER
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///INPUT
+             <listheader>
+             <term>Field</term>
+             <term>Type</term>
+             <term>Optional/Mandatory</term>
+             <term>Description</term>
+             </listheader>
+             <item>
+             <term>Auth-Token</term>
+             <term>text/plain</term>
+             <term>M</term>
+             <term>Represents authentication token provided by server.</term>
+             </item>
+             <item>
+             <term>Cache-Control</term>
+             <term>text/plain</term>
+             <term>O</term>
+             <term>Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain.</term>
+             </item>
+             </list>
+             <list type="table"> ///OUTPUT
+             <listheader>
+             <term>Status</term>
+             <term>Output</term>    
+             </listheader>
+             <item>
+             <term>200</term>
+             <term>{
+             "Status": {
+             "Code": "API_SUCCESS",
+             "Messages": [
+             "Successful"
+             ]
+             },
+             "Data": {
+             "Companies": [
+             {
+             "CompanyId": 239,
+             "Company": "LG"
+             },
+             {
+             "CompanyId": 231,
+             "Company": "Tata Motors"
+             },{
+             "CompanyId": 267,
+             "Company": "GM"
+             }
+             ]
+             }
+             }
+            }</term>
+             </item>
+             <item>
+             <term>400</term>
+             <term>{
+            "Message": "Invalid input parameters",
+            "ErrorCode": "API_BAD_REQUEST"
+            }</term>
+             </item>
+             </list>
+             <list>
+             <item>
+             <term> 
+             <description>URL : http://dev.kantar-data-providers.com/api/Company/GetAllCompanyList
+             </description>
+             </term>
+             </item>
+             </list>
+             </summary>
+        </member>
+    </members>
+</doc>
