@@ -49,3 +49,6 @@ javascript validator
 # Useful Links
 # Nodejs Architecture
 http://www.journaldev.com/7462/node-js-architecture-single-threaded-event-loop
+
+#Error handling
+https://www.joyent.com/node-js/production/design/errors
